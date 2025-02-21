@@ -1,4 +1,0 @@
-[submodule "diffbot"]
-	path = diffbot
-	url = https://github.com/Vinothhk/Nokiya-BOT.git
-	branch = humble-harmonic
