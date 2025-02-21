@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="diffbot">
+
+    <xacro:include filename="$(find diffbot)/urdf/materials.xacro"/>
+    <xacro:include filename="$(find diffbot)/urdf/inertia.xacro"/>
+    <xacro:include filename="$(find diffbot)/urdf/gazebo.xacro"/>
+
+    <link name="base_footprint"/>
+
+    <link name="base_link"/>
+
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0.0" />
+    </joint>
+
+    <link name="chassis_link">
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="1.0 1.5 0.3"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="file://$(find diffbot)/meshes/body_nokiya.dae" scale="1 1 1"/>
+            </geometry>
+        </visual>
+
+        <inertial>
+            <mass value="1.0" />
+            <xacro:box_inertia m="1.0" x="1.0" y="1.5" z = "0.3"/>
+        </inertial>
+
+    </link>
+
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis_link"/>
+        <origin xyz="0.0 0 0" rpy="0 0 0.0" />
+    </joint>
+
+    <!-- Left Wheels -->
+    <link name="front_left_wheel">
+
+        <collision>
+            <origin xyz="0 0 0" rpy="1.57 0 0" />
+            <geometry>
+                <cylinder radius="0.2" length="0.1"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="1.57 0 0" />
+            <geometry>
+                <cylinder radius="0.2" length="0.1"/> 
+            </geometry>
+        </visual>
+
+        <inertial>
+            <mass value="0.5"/>
+            <xacro:cylinder_inertia m="0.5" r="-0.2" h="0.1"/>
+        </inertial>
+
+    </link>
+
+    <joint name="front_left_wheel_joint" type="continuous">
+        <parent link="chassis_link"/>
+        <child link="front_left_wheel"/>
+        <origin xyz="0.4 0.55 -0.07" rpy="0 0 0" />
+        <axis xyz="0.0 1.0 0.0"/>
+    </joint>
+
+    <link name="rear_left_wheel">
+        <collision>
+            <origin xyz="0 0 0" rpy="1.57 0 0" />
+            <geometry>
+                <cylinder radius="0.2" length="0.1"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="1.57 0 0" />
+            <geometry>
+                <cylinder radius="0.2" length="0.1"/> 
+            </geometry>
+        </visual>
+
+        <inertial>
+            <mass value="0.5"/>
+            <xacro:cylinder_inertia m="0.5" r="-0.2" h="0.1"/>
+        </inertial>
+
+    </link>
+
+    <joint name="rear_left_wheel_joint" type="continuous"> <!--continuous-->
+        <parent link="chassis_link"/>
+        <child link="rear_left_wheel"/>
+        <origin xyz="-0.4 0.55 -0.07" rpy="0 0 0" />
+        <axis xyz="0.0 1.0 0.0"/>
+    </joint>
+
+    <!-- Right Wheels -->
+    <link name="front_right_wheel">
+
+        <collision>
+            <origin xyz="0 0 0" rpy="1.57 0 0" />
+            <geometry>
+                <cylinder radius="0.2" length="0.1"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="1.57 0 0" />
+            <geometry>
+                <cylinder radius="0.2" length="0.1"/> 
+            </geometry>
+        </visual>
+
+        <inertial>
+            <mass value="0.5"/>
+            <xacro:cylinder_inertia m="0.5" r="-0.2" h="0.1"/>
+        </inertial>
+
+    </link>
+
+    <joint name="front_right_wheel_joint" type="continuous"> 
+        <parent link="chassis_link"/>
+        <child link="front_right_wheel"/>
+        <origin xyz="0.4 -0.55 -0.07" rpy="0 0 0" />
+        <axis xyz="0.0 1.0 0.0"/>
+    </joint>
+
+    <link name="rear_right_wheel">
+        <collision>
+            <origin xyz="0 0 0" rpy="1.57 0 0" />
+            <geometry>
+                <cylinder radius="0.2" length="0.1"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="1.57 0 0" />
+            <geometry>
+                <cylinder radius="0.2" length="0.1"/> 
+            </geometry>
+        </visual>
+
+        <inertial>
+            <mass value="0.5"/>
+            <xacro:cylinder_inertia m="0.5" r="-0.2" h="0.1"/>
+        </inertial>
+
+    </link>
+
+    <joint name="rear_right_wheel_joint" type="continuous"> <!--continuous-->
+        <parent link="chassis_link"/>
+        <child link="rear_right_wheel"/>
+        <origin xyz="-0.4 -0.55 -0.07" rpy="0 0 0" />
+        <axis xyz="0.0 1.0 0.0"/>
+    </joint>
+
+    <gazebo reference="front_left_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <gazebo reference="front_right_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <gazebo reference="rear_left_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <gazebo reference="rear_front_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- ............................. 2D LIDAR ........................................ -->
+
+    <!-- <xacro:if value="$(arg two_d_lidar_enabled)"> -->
+
+    <link name="two_d_lidar">
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder length="0.06" radius="0.075"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder length="0.06" radius="0.075"/>
+            </geometry>
+            <material name="aluminium"/>
+        </visual>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.1"/>
+            <xacro:cylinder_inertia m="0.1" r="0.075" h="0.06"/>
+        </inertial>
+    </link>
+
+    <joint name="two_d_lidar_joint" type="fixed">
+        <parent link="chassis_link"/>
+        <child link="two_d_lidar"/>
+        <origin xyz="0.0 0 0.16" rpy="0 0 0" />
+    </joint>
+
+    <gazebo reference="two_d_lidar">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+
+    <!-- ............................. IMU ........................................ -->
+
+    <link name="imu_frame"/>
+
+    <joint name="imu_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="imu_frame"/>
+        <origin xyz="0.0 0.0 0.16" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+</robot>

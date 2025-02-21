@@ -1,0 +1,38 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/vinoth/ros2_ws/install/tortoisebot_patrol/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/tortoisebot_mapping/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/tortoisebot_localization/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/tortoisebot_firmware/local/lib/python3.10/dist-packages",
+        "/home/vinoth/ros2_ws/install/tortoisebot_control/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/ros2_aruco_interfaces/local/lib/python3.10/dist-packages",
+        "/home/vinoth/ros2_ws/install/ros2_aruco/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/my_python/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/limo_nav/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/limo_msgs/local/lib/python3.10/dist-packages",
+        "/home/vinoth/moveit_ws/install/moveit_configs_utils/lib/python3.10/site-packages",
+        "/home/vinoth/moveit_ws/install/srdfdom/local/lib/python3.10/dist-packages",
+        "/home/vinoth/moveit_ws/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages",
+        "/home/vinoth/moveit_ws/install/launch_param_builder/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/vinoth/ros2_ws/install/tortoisebot_patrol/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/tortoisebot_mapping/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/tortoisebot_localization/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/tortoisebot_firmware/local/lib/python3.10/dist-packages",
+        "/home/vinoth/ros2_ws/install/tortoisebot_control/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/ros2_aruco_interfaces/local/lib/python3.10/dist-packages",
+        "/home/vinoth/ros2_ws/install/ros2_aruco/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/my_python/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/limo_nav/lib/python3.10/site-packages",
+        "/home/vinoth/ros2_ws/install/limo_msgs/local/lib/python3.10/dist-packages",
+        "/home/vinoth/moveit_ws/install/moveit_configs_utils/lib/python3.10/site-packages",
+        "/home/vinoth/moveit_ws/install/srdfdom/local/lib/python3.10/dist-packages",
+        "/home/vinoth/moveit_ws/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages",
+        "/home/vinoth/moveit_ws/install/launch_param_builder/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
