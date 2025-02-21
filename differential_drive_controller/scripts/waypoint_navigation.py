@@ -6,6 +6,7 @@ from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from tf_transformations import euler_from_quaternion
 import math
+import subprocess
 
 class WaypointNavigator(Node):
     def __init__(self):
@@ -43,6 +44,7 @@ class WaypointNavigator(Node):
         self.current_y = 0.0
         self.current_yaw = 0.0
         self.current_waypoint = 0
+        self.model_reset = False
         self.timer = self.create_timer(0.1, self.control_loop)
     
     def odom_callback(self, msg):
@@ -62,8 +64,12 @@ class WaypointNavigator(Node):
         if self.current_waypoint >= len(self.waypoints):
             self.cmd_vel_pub.publish(Twist())
             self.get_logger().info("Reached all waypoints!")
+            if not self.model_reset:
+                self.model_reset = True
+                self.reset_model()
             return
         
+        self.model_reset = False
         target_x, target_y = self.waypoints[self.current_waypoint]
         error_x = target_x - self.current_x
         error_y = target_y - self.current_y
@@ -89,6 +95,13 @@ class WaypointNavigator(Node):
         twist_msg.linear.x = linear_velocity
         twist_msg.angular.z = angular_velocity
         self.cmd_vel_pub.publish(twist_msg)
+
+    def reset_model(self):
+        self.get_logger().info("Resetting model position...")
+        subprocess.run([
+            "gz", "service", "--timeout", "10000", "-s", "/world/default/set_pose", "--reptype", "gz.msgs.Boolean", "--reqtype", "gz.msgs.Pose", "--req", 
+            "name: 'diffbot'\nposition {\n  x: 0.0\n  y: 0.0\n  z: 0.35\n}"
+        ])
 
 def main(args=None):
     rclpy.init(args=args)
