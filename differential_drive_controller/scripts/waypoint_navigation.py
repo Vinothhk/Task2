@@ -18,7 +18,7 @@ class WaypointNavigator(Node):
         self.declare_parameter('waypoint_2_y', -4.0)
         self.declare_parameter('kp', 1.0)
         self.declare_parameter('ki', 0.0)
-        self.declare_parameter('kd', 0.0)
+        self.declare_parameter('kd', 0.5)
         
         # Get parameters
         self.waypoints = [

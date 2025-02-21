@@ -42,7 +42,7 @@ install(TARGETS
 
 install(
   PROGRAMS
-  scripts/waypoint_nav.py
+  scripts/waypoint_navigation.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
