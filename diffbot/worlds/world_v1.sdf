@@ -68,67 +68,67 @@
       <self_collide>false</self_collide>
     </model>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/warehouse/5</uri>
+      <uri>model://warehouse/5</uri>
       <name>warehouse</name>
       <pose>0 0 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_bucket_01/3</uri>
+      <uri>model://aws_robomaker_warehouse_bucket_01/3</uri>
       <name>aws_robomaker_warehouse_Bucket_01</name>
       <pose>3.49064 4.18007 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_shelfd_01/4</uri>
+      <uri>model://aws_robomaker_warehouse_shelfd_01/4</uri>
       <name>aws_robomaker_warehouse_ShelfD_01</name>
       <pose>-1.01162 -17.5282 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_shelfd_01/4</uri>
+      <uri>model://aws_robomaker_warehouse_shelfd_01/4</uri>
       <name>aws_robomaker_warehouse_ShelfD_01_0</name>
       <pose>-1.05191 -12.0549 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringc_01/4</uri>
+      <uri>model://aws_robomaker_warehouse_clutteringc_01/4</uri>
       <name>aws_robomaker_warehouse_ClutteringC_01</name>
       <pose>-9.60304 10.4151 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringd_01/4</uri>
+      <uri>model://aws_robomaker_warehouse_clutteringd_01/4</uri>
       <name>aws_robomaker_warehouse_ClutteringD_01</name>
       <pose>-4.58805 -1.11754 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringc_01/4</uri>
+      <uri>model://aws_robomaker_warehouse_clutteringc_01/4</uri>
       <name>aws_robomaker_warehouse_ClutteringC_01_0</name>
       <pose>4.4908 -7.27932 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringd_01/4</uri>
+      <uri>model://aws_robomaker_warehouse_clutteringd_01/4</uri>
       <name>aws_robomaker_warehouse_ClutteringD_01_0</name>
       <pose>4.82404 13.471 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringc_01/4</uri>
+      <uri>model://aws_robomaker_warehouse_clutteringc_01/4</uri>
       <name>aws_robomaker_warehouse_ClutteringC_01_1</name>
       <pose>0.063742 18.7773 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_shelfe_01/4</uri>
+      <uri>model://aws_robomaker_warehouse_shelfe_01/4</uri>
       <name>aws_robomaker_warehouse_ShelfE_01</name>
       <pose>10.9806 5.13352 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_shelfe_01/4</uri>
+      <uri>model://aws_robomaker_warehouse_shelfe_01/4</uri>
       <name>aws_robomaker_warehouse_ShelfE_01_0</name>
       <pose>10.923 20.1281 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_bucket_01/3</uri>
+      <uri>model://aws_robomaker_warehouse_bucket_01/3</uri>
       <name>aws_robomaker_warehouse_Bucket_01_0</name>
       <pose>11.0512 -5.9221 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/vinoth/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringd_01/4</uri>
+      <uri>model://aws_robomaker_warehouse_clutteringd_01/4</uri>
       <name>aws_robomaker_warehouse_ClutteringD_01_1</name>
       <pose>10.7764 -14.724 0 0 -0 0</pose>
     </include>
