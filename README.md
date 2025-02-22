@@ -17,6 +17,8 @@ To Launch the robot
 ```bash
 ros2 launch diffbot gazebo.launch.py
 ```
+NOTE: If robot is not spawned,close the gazebo and relaunch.
+
 # Part 1 - Differential Drive Controller
 
 This packages contains C++ Node to Listen Twist Messages from /cmd_vel, convert them into RPM and then publish them in topics /left_wheel_rpm and /right_wheel_rpm .
